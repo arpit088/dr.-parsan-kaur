@@ -1,0 +1,403 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath , amssymb, amsthm}
+\usepackage{geometry}
+
+\geometry{a4paper, margin=1in}
+
+\title{Inverse Theorem by Linear Combination for Certain Baskakov-Durrmeyer Type Operators}
+\author{
+    Man Singh Beniwal \\
+    Department of Applied Sciences, \\
+    Maharaja Surajmal Institute of Technology, \\
+    C-4 Janak Puri, New Delhi-110058, India \\
+    \texttt{man\_s\_2005@yahoo.co.in}
+    \and
+    Parsan Kaur \\
+    Guru Teg Bahadur Institute of Technology, \\
+    G-8 Rajouri Garden, New Delhi-110064, India \\
+    Corresponding Author: \texttt{parsank@yahoo.com}
+    \and
+    Simmi Singh \\
+    Department of Applied Sciences, \\
+    Guru Tegh Bahadur Institute of Technology, \\
+    G-8 Rajouri Garden, New Delhi-110064
+}
+
+\begin{document}
+
+\date{}
+\maketitle
+
+
+\begin{abstract}
+Very recently, I have studied several direct results for certain Baskakov-Durrmeyer type operators. Here, I extend the studies to obtain the inverse theorem of unbounded continuous functions by a linear combination.
+\end{abstract}
+
+\textbf{Keywords:} Linear positive operators, Baskakov beta operators, linear combinations, inverse theorem.
+
+\textbf{AMS Subject Classification:} 41A25, 41A30.
+
+\section{Introduction}
+
+Recently Gupta et al. [1] introduced the following type of Baskakov-Durrmeyer type operators as
+for $f \in C_a[0,\infty)\equiv f \in C[0, \infty ):$ 
+
+\[
+|f(t)| \leq M(1+t)^\alpha \text{ for some } M > 0, \alpha > 0.
+\]
+
+The operators introduced in \cite{gupta2006} are defined as:
+
+\[
+    B_n f(t) x = \sum_{v=1}^{\infty} p_{nv}(x) \int_{0}^{\infty} b_{nv}(t) f(t) \, dt + p_{n0}(x) f(0)
+\]
+\[
+    = \int_{0}^{\infty} W_{n}(x,t) \, dt
+\]
+where
+\[
+    p_{nv}(x) = \binom{n+v-1}{v} \frac{x^v (1+x)^{-(n+v)}}, \quad b_{nv} = \frac{1}{B(n+1, v)} t^{v-1} (1+t)^{-(n+v+1)},
+\]
+
+And \[W_n(x, t) = \sum_{v=1}^{\infty} p_{nv}(x) b_{nv}(t) + p_{n0}(x) \delta(t),\]
+
+with $\delta(t)$ being the Dirac-delta function.
+
+The space $C^{\alpha}[0, \infty)$ is normed by 
+\[
+    \|f\|_{C^{\alpha}} = \sup_{0 \leq t < \infty} \frac{|f(t)|}{(1+t)^{\alpha}}.
+\]
+Let $d_0, d_1, \ldots, d_k$ be $(k+1)$ arbitrary but fixed distinct positive integers. Then the linear combination $B_n(f, k, x)$ of $B_{d_j, n} f(x)$ for $j=0, 1, \ldots, k$ is given by:
+\[
+    B_n(f, k, x) = \sum_{j=0}^{k} C_{jk} B_{d_j, n} f(x),
+\]
+where 
+\[
+    C_{jk} = \prod_{\substack{i=0 \\ i \neq j}}^{k} \frac{d_i}{d_i - d_k}, \quad \text{and} \quad C_{00} = 1.
+\]
+
+These linear combinations were first used by May \cite{may1976} and later by Kasana \cite{kasana1988} to improve the order of approximation of exponential type operators.
+
+\section{Basic Results}
+
+\begin{lemma} \textbf{[Lemma 2.1]}
+For $N \subset \mathbb{N} \cup \{0\}$, if we have
+\[
+    \mu_{nm}(x) = \sum_{v=0}^{\infty} p_{nv}(x) v^n - x^m,
+\]
+then for $m > 1$ we have:
+\[
+    n\mu_{n, m+1}(x) = x(x+1)\mu_{n, m}(x) + m\mu_{n, m-1}(x).
+\]
+Consequently, for all $x \in [0, \infty)$, one has
+\[
+    \mu_{nm}(x) = O(n^{-(m+1)/2}),
+\]
+where $\alpha$ denotes the integral part.
+\end{lemma}
+
+\begin{lemma}\textbf{[Lemma 2.2 [1]}
+Let the function $T_{n, m}(x)$, $m \in \mathbb{N} \cup \{0\}$, be defined as
+\[
+    T_{n, m}(x) = B_n((t - x)^m, x) = \sum_{v=1}^{\infty} p_{nv}(x) \int_{0}^{\infty} b_{nv}(t) (t - x)^m dt + (1+x)^{-m} (-x)^m.
+\]
+Then 
+\[
+    T_{n, 0}(x) = 1, \quad T_{n, 1}(x) = 0, \quad T_{n, 2}(x) = \frac{2x(1+x)}{n-1},
+\]
+and also there holds the recurrence relation:
+\[
+    n - mT_{n, m+1}(x) = x(1+x)T_{n, m-1}(x) + 2mT_{n, m-1}(x).
+\]
+From the above recurrence relation, it is easily verified that
+\[
+    T_{n, m}(x) = O(n^{-(m+1)/2}) \quad \text{for all } x \in [0, \infty).
+\]
+\end{lemma}
+
+\begin{lemma}\textbf{[Lemma 2.3]}
+Consequently, using Hölder’s inequality in Lemma 2.2, we have
+\[
+    B_n(t - x)^r x = O(n^{-r/2}),
+\]
+for each $r > 0$ and every fixed $x \in [0, \infty)$.
+\end{lemma}
+
+\begin{theorem}\textbf{[Theorem 2.4]}
+[Direct theorem]
+Let $f \in C^{2k+2}[0,\infty)$ admitting a derivative of order $(2k+2)$ at a point $x \in [0,\infty)$. Then
+\begin{align*}
+\lim_{n\to\infty} n^{k+1} \left[ B_{n}(f,k,x) - f(x) \right] &= \sum_{r=1}^{2k+2} \frac{f^{(r)}(x)}{r!} Q(r,k,x) \\
+\lim_{n\to\infty} n^{k+1} \left[ B_{n}(f,k,x) - f(x) \right] &= 0
+\end{align*}
+and
+where $Q(r, k, x)$ are certain polynomial in $k$ of degree $r$.
+
+Further, $f^{(2k+1)}$ exists and absolutely continuous over $[a, b]$ and $f^{(2k+1)} \in L_{\infty}[a,b],$
+
+then for any $[c, d] \subset [a, b]$, there hold
+
+\[ ||B_{n}(f, k, x) - f(x)||_{C[c,d]} \leq B_{n}^{-(k+1)} \left\{ ||f||_{C_{\alpha}} + ||f^{(2k+2)}||_{L_{\infty}[a,b]} \right\} \]
+\end{theorem}
+
+
+\begin{theorem}\textbf{[Theorem 2.5]}
+[Direct theorem]
+Let $f \in C_{\alpha}[0,\infty)$. Then, for sufficiently large $n$, there exist a constant $M$ independent of $f$ and $n$ such that
+\[ ||B_{n}(f, k, \cdot) - f||_{C[a_{2},b_{2}]} \leq M \left\{ \omega_{2k+2}(f, \frac{1}{n}, a_{1}, b_{1}) + n^{-(k+1)}||f||_{C_{\alpha}} \right\}. \]
+\end{theorem}
+
+
+\section{Inverse Theorem}
+
+\begin{theorem}[Theorem 3.1]
+Let $f \in C_{\alpha}[0, \infty)$ and $B_n(f, x)$ be as previously defined. Then, in the following statements the implications $(i) \Rightarrow (ii) \Leftrightarrow (iii) \Rightarrow (iv) hold:
+\begin{enumerate}(i)
+   \[
+\left\| B_n(f; k, x) - f \right\|_{C[a, b]} = O \left({n^-{\frac{\alpha(k+1)}{2}}} \right)
+\]
+
+    \item 
+\begin{itemize}(ii)
+         f \in Li_2(x, k+1, a, b)
+\end{itemize}
+    
+    
+    (iii) \begin{cases}
+    (a) \text{For } m < \alpha(k+1) < m+1, \quad m = 0, 1, 2, \ldots, 2k+1, \quad f^{(m)} \text{ exist and belong to the class } Lip(\alpha(k+1)-m, a_2, b_2); \\
+    (b) \text{For } \alpha(k+1) = m+1, \quad m = 0, 1, 2, \ldots, 2k+1, \quad f^{(m)} \text{ exist and belong to the class } Lip(1, a_2, b_2);
+\end{cases}
+(iv) ||B_n(f, k, x) - f||_{C[a_n, b_1]} = O\left(n^{-\frac{\alpha(k+1)}{2}}\right), \quad \text{where } Liz(\alpha, k, a, b) \text{ denotes the class of} \\
+\text{functions for which } \omega_2(f, h, a, b) \leq Mh^{\alpha}, \quad \text{when } k=1, \quad Liz(\alpha, 1) \text{ reduces to the} \\
+\text{Zygmund class } Lip^* \alpha.
+\end{enumerate}
+\end{theorem}
+
+
+\begin{proof}
+The implications (i) and (iii) are equivalent (see \cite{6}). The implication (iii) $\Rightarrow$ (iv) follows from Theorem 2.4. Therefore, to prove the theorem, we have to show (i) $\Rightarrow$ (ii). We proceed as follows:
+
+
+\text{Choose points } a', a'', b', b'' \text{ in such a way that } a_1 < a' < a < a'' < a_2 < b' < b'' < b < b_1. \\
+\text{and a function } g \in C_{0}^{\infty} \text{ such that:} \\
+&\supg \in {(a', b')} g(t) = 1 \\
+&g(t) = 1 \quad \text{for } t \in [a, b].
+
+
+
+Hence, to prove the assertion, it is sufficient to show that
+\begin{equation}
+\label{eq3.1}
+(3.1) \quad ||B_{n}(fg,k,x)-fg||_{C[a;b]}=O\left(n^{-\frac{\alpha(k+1)}{2}}\right) \implies (ii).
+\end{equation}
+
+Writing $ f(g)=\=f$ for all small values of $r$.
+
+\[
+||\Delta_r^{2k+2}\=f||_{C[a'',b'']} \leq ||\Delta_r^{2k+2}||\=f-B_n(\=f,k,x)||_{C[a'',b'']} \\
++ ||\Delta_r^{2k+2}||B_n(\=f,k,x)||_{C[a'',b'']}||.
+
+\]
+
+Therefore, by definition of \Delta_r^{2k+2} 
+
+\[
+|\Delta_r^{2k+2}B_n(\=f,k,x)||_{C[a'',b'']} \\
+= \left|\int_{0}^{r} \int_{0}^{r}\cdots\int_{0}^{r}B_n^{(2k+2)}(\=f,k,x+\sum_{i=1}^{2k+2}dt_i)dt_1dt_2\cdots dt_{2k+2}\right||_{C[a'',b'']} \\
+\leq r^{2k+2}|B_n^{(2k+2)}(\=f,k,x)||_{C[a'',b''+(2k+2)r]}
+
+\text{i.e., } \Delta_r^{2k+2}B_n(\=f,k,x)||_{C[a',b']} \\
+\leq r^{2k+2}\left\{||B_n^{(2k+2)}(f-f_{n,2k+2},k,x)||_{C[a'',b''+(2k+2)r]} \right. \\
+\left. + | \Delta_r^{2k+2}B_nB_n^{(2k+2)}(f_{n,2k+2},k,x)||_{C[a'',b''+(2k+2)r]}\right\}.\\
+\]
+
+
+
+\text{where } \overline{f}_{n,2k+2} \text{ is the Steklov mean of (2k+2)-th order corresponding to } \overline{f}.\\
+
+\text{Consequently by Lemma 2.3[5], we have}\\
+
+\left\ \int_{0}^{\infty}|\frac{\partial^{2k+2}}{\partial x^{2k+2}}W_n(x,t)\right\|dt \\
+\leq \sum_{2i+l\leq2k+2i,l\ge 0} \sum_{v=1}^{\infty}n^i |v-nx^{l}|} \left|\frac{q_{i,l,2k+2}(x)}{x(1+x)^{2k+2}}p_{n,v}\right \left\int_{0}^{\infty} b_{n,v}(t)dt - \frac{(n+2k+1)}{(n-1)!}(1+x)^{-(n+2k+2)}\right. \\
+
+
+\text{Now applying Schwarz inequality and Lemma 2.1[5], we get}
+
+||B_{n}^{(2k+2)}(\overline{f}-\overline{f}_{n,2k+2},k,x)||_{C[a'',b''+(2k+2)r]} \\
+\leq K_1 n^{k+1}||\overline{f}-\overline{f}_{n,2k+2}||_{C[a'',b'']}
+
+\text{on the other hand, by Lemma 2.2[5], we have}
+
+By Taylor's expansion of $^\=f_{n,2k+2}(t)$, we have
+\begin{equation}
+(3.3) \quad \overline{f}_{n,2k+2}(t) =\sum_{i=0}^{2k+1}\frac{\overline{f}_{\eta,2k+2}^{(i)}(x)}{l!}(t-x)^{i} + f_{n,2k+2}^{-(2k+2)}(\xi)\frac{(t-x)^{2k+2}}{(2k+2)!}.
+\end{equation}
+
+Using (3.2) and (3.3), we obtain
+\[
+\left\|\frac{\partial^{2k+2}}{\partial x^{2k+2}}B_n\left(\overline{f}_{n,2k+2},k,x\right)\right\|_{C[a'',b''+(2k+2)r]} \\
+\leq \sum_{j=0}^{k}\frac{|C(j,k)|}{(2k+2)!}\left\|\overline{f}_{n,2k+2}^{(2k+2-j)}\right\|_{C[a'',b'']} \left\|\int_{0}^{\infty}\frac{\partial^{2k+2}}{\partial x^{2k+2}}W_{d_{j}_(n)}(x,t)(t-x)^{2k+2}dt\right\|_{C[a'',b'']}
+\]
+
+Next, applying Lemma 2.1 and Lemma 2.2 [5] and the Cauchy-Schwarz inequality, we get
+\[
+I = \left|\int_{0}^{\infty} \left\|\frac{\partial^{2k+2}}{\partial x^{2k+2}}W_{d_{j}n}(x,t)(t-x)^{2k+2}\right\|_{C[a'',b'']} dt\right| \\
+\leq \sum_{i,j=0}^{2k+2}n^{i}\left|\frac{q_{i,j,2k+2}(x)}{M_{n,2k+2}}\right|\left|O(n^{-i})O(n^{-\frac{\alpha(k+1)}{2}})\right|
+\]
+
+
+Hence
+\[
+   \left\|B_{n}^{(2k+2)}\left(\overline{f}_{n,2k+2},k,x\right)\right\|_{C[a'',b''+(2k+2)r]} \leq K_{n}\left\|\overline{f}_{n,2k+2}^{(2k+2)}\right\|_{C[a'',b'']}
+\]
+(3.3)\\
+combining the estimates of Theorem 2.4and (3.3), we get
+\[
+
+\left\|\Delta_r^{2k+2}\overline{f}\right\|_{C[a',b']} \leq \Delta_r^{2k+2}\left\|\overline{f}-B_n(\overline{f},k,x)\right\|_{C[a',b']} + K_{3}r^{2k+2}\left\{\left\|\overline{f}-\overline{f}_{n,2k+2}\right\|_{C[a'',b'']} + \left\|\overline{f}_{n,2k+2}^{(2k+2)}\right\|_{C[a'',b'']}\right\}.
+
+\]
+
+
+Since the above holds for sufficiently small values of $r$, it follows from Theorem 2.4 and by the property of the Steklov mean $^\=f_{n,2k+2}$that
+\[
+\omega_{2k+1}(\overline{f},h,[a,b]) \leq K_{4}\left\{n^{\frac{\alpha(k+1)}{2}} + h^{2k+2}(  n^{k+1}+ n^{-(2k+2)})\omega_{2k+2}\left(\overline{f}_{n,2k+2},h,[a'',b'']\right)\right\}.
+\]
+
+Finally, choosing $n$ such that $n < n^{-2} < 2n \ $ and following Berens and Lorentz [7], we obtain
+(3.4)
+
+\begin{equation}
+\omega_{2k+2}(\overline{f},h,[a_2,b_2]) = o(h^{\alpha(k+1)})
+\end{equation}
+
+For $t \in [a_2,b_2], \quad \overline{f}(t) = f(t)$, the result follows from (3.4}).
+
+To complete the proof of ^{ (i) \Rightarrow (ii)},\text {we have to prove the validity of Theorem 2.4 under the hypothesis (i).}\\
+
+
+Let $^{r=a(k+1)}$. First, we consider the case $0<r \leq 1 \ $. For $^{t \in [a',b']}$, we have
+\begin{equation}
+\label{(3.5)}
+B_n(fg,k,x)-f(x)g(x) = g(x)\left[B_n((f(t)-f(x)),k,x)\right]+\\
+\sum_{j=0}^{i}C(j,k)\left|\int_{a}^{b}W_{d,n}(x,t)f^{(j)}(t)(g(t)-g(x))dx\right| + o(n^{-(i+1)}) =\\
+J_1 + J_2 + o(n^{-(k+1)})
+\end{equation}
+where the $o$-term holds uniformly for $^{x \in [a',b']}$ (by Lemma 2.4 [5]). From the assumption
+\[
+||B_n(f,k,x)-f||_{C[a,b]} = O(n^{-1})
+\]
+we have
+\begin{equation}
+\label{(3.6)}
+||J_1||_{C[a,b]} \leq ||g||_{C[a,b]}||B_n(f,k,x)-f||_{C[a,b]} \leq K_3n^{-2}
+\end{equation}
+
+By the use of the Mean Value Theorem, we get
+\[
+J_2 = \sum_{j=0}^{i}C(i,j)\left|\int_{a}^{b}W_{d,n}(x,t)f^{(j)}(t)\left(g\left(\frac{x+t}{2}\right)-g(x)\right)dt\right|
+\]
+
+Also, by using Lemma 2.2 [5] and the Cauchy-Schwarz inequality, we obtain
+\begin{equation}
+\label{(3.8)}
+\text||J_2||_{C[a,b]} \leq ||f||_{C[a,b]}||g||_{C[a,b]}\left|\sum_{j=0}^{k}C(j,k)\max_{t\in[a'',b'']}\left|\int_{0}^{\infty}W_{d,n}(x,t)(t-x)^{j}dt\right|\right|\\
+
+\leq K_{6}||f||_{C[a_{1},b_{1}]}||g||_{\infty}\left(\sum_{j=2}^{k}|C(j,k)|\right)n^{-1/2} \leq O(n^{-1/2})
+\end{equation}
+
+Combining the estimates of (3.6) and (3.7), we have in (3.5}) that
+\[
+||B_n(fg,k,x)-fg||_{C[a^',b^']} = O(n^{-r/2})
+\]
+
+Hence, the result holds for $0<r \leq 1 \ $.
+
+To prove the result for $0<r \leq 2(k+1) \ $, we assume it for $^{r \in (m-1,m)$ and prove it for $^{r \in (m+1,m),m= 1,2 .....,2k+1$. We assume that $^{r \in (m+1,m)} $ and (i) hold. Choosing the points $x_i,y_i$ such that $a_1 < x_1 < a' < b' < y_1 < b_1$. Then, in view of the assumption for the interval (ii) and (iii), it follows that $f^{(k+1)} \in C_{\alpha}[0, \infty)$. Then, with $^{f^{m-1}}$ exists and belongs to $^{Lip(1-\delta,x_1,y_1), \delta > 0}$ denoting the characteristic function of the interval $[x_1,y_1]$, we have \\
+(3.8) \\
+
+\begin{equation}
+||B_n(fg,k,x)-fg||_{C[a,b]} 
+\leq ||B_n(g(x)(f(t)-f(x)),k,x||_{C[a^'',b^'']}\left\|B_{n}((f(t)-f(x)),k,x)}\right\|_{C[a^'',b^'']}
++ o(n^{-(k+1)})
+\end{equation}
+
+Now,
+
+(3.9)
+\begin{equation}
+||B_n(g(x)(f(t)-f(x)),k,x)||_{C[a,b]}
+
+\leq ||g||_{C[a,b]}||B_n(f,k,x)-f||_{C[a,b]}
+
+= O(n^{-r/2})
+\end{equation}
+
+By the use of Taylor's expansion of $f$, we get
+\[
+f(t) = \sum_{i=0}^{m-1}\frac{f^{(i)}(x)}{i!}(t-x)^{i} + \frac{f^{(m-1)}(\xi)}{(m-1)!}(t-x)^{m-1} \quad ^{\epsilon}\text{(lying between $t$ and $x$)}.
+\]
+
+Thus,
+\[
+J_1 = ||B_n(f(t)(g(t)-g(x)),k,x)||_{C[a,b]}
+
+= \left|\sum_{i=0}^{m-1}\frac{f^{(i)}(x)}{i!}(t-x)^{i} + \frac{f^{(m-1)}(\xi)-f^{(m-1)}(x)}{(m-1)!}(t-x)^{m-1}\right|\left|g(t)-g(x)\right|_{C[a,b]}
+\]
+
+Since
+\[
+f^{(m-1)} \in Lip(1-\delta,x_1,y_1)
+
+|f^{(m-1)}(\xi)-f^{(m-1)}(x)| \leq K_{-}\left|\frac{\xi-x}{t-x}\right|^{1-\delta} \leq K_{-}|t-x|^{1-\delta}
+\]
+where $^{K_7}$ is the Lip constant for $f^{(m-1)}$. We have \\
+(3.10)
+
+\begin{equation}
+J_1 \leq ||B_n\left(\sum_{i=0}^{m-1}\frac{f^{(i)}(x)}{i!}(t-x)^{i} + \frac{f^{(m-1)}(\xi)-f^{(m-1)}(x)}{(m-1)!}(t-x)^{m-1}\right)(g(t)-g(x)),k,x)||_{C[a,b]} +
+
+K_{-}\frac{1}{(m-1)!}||g||_{C[a,b]}\left(\sum_{j=0}^{i}C(i,j)\right)||B_{n,p}(t-x)^{i}y^{(i)}(t,x)||_{C[a,b]}
+
+= J_1 + J_2 \text{,say}
+\end{equation}
+
+Making use of Theorem 2.5 and Taylor's expansion of $g$, we get
+(3.11)
+\begin{equation}
+J_2 = O(n^{-(k+1)})
+\end{equation}
+
+Next, using Hölder's inequality and Lemma 2.1[5], we have
+\begin{equation}
+J_3 \leq K_{7}||g||_{C[a,b]}\left(\sum_{j=0}^{k}|C(j,k)|\right)\left|\max_{t\in[a'',b'']}\left|\int_{0}^{\infty}W_{d,n}(x,t)(t-x)^{j}dt\right|\right| \\
+
+\text{(3.12)} J_3 \leq K_{7}\max_{x\in[a',b']}\left|\int_{0}^{\infty}W_{d,n}(x,t)|t-x|^{2(m-1)}dt\right| \\
+
+O\left(n^{-\frac{(m+1-j)}{2}}\right) = O(n^{-r/2})
+\end{equation}
+
+Combining (3.8)--(3.12}), we obtain
+\[
+||B_n(fg,k,x)-fg||_{C[a,b]} = O(n^{-1})
+\]
+
+This completes the proof.
+\end{proof}
+
+
+
+
+\section*{REFERENCES}
+
+\begin{enumerate}
+    \item V. Gupta, M. A. Noor, M. S. Beniwal, and M. K. Gupta, On simultaneous approximation for certain Szasz-Baskakov Durrmeyer type operators, J. Inequal Pure and appl. Math., 7(4) Art. 125, 2006.
+    \item C. P. May, Saturation and inverse theorems for Combinations of a class of exponential type operators, Canad. J. Math., 28(1976), 1224-1250.
+    \item H. S. Kasana and P. N. Agrawal, On sharp estimates and Linear Combinations of modified Bernstein polynomials, Bull. Soc. Math. Belg. Ser. B40(1)(1988), 67-71.
+    \item C. P. May, Saturation and inverse theorems for combinations of a class of exponential type operators, Canad. J. Math. 28(1976), 1224-1250.
+    \item M. S. Beniwal, Degree of approximation by combination for certain Baskakov-Durrmeyer type operators, Satyam-MSIT Journal of Research Vol 1 No. 1, 2012.
+    \item A. F. Timan, Theory of Approximation of Functions of a Real Variables, English Translation, Pergamon Press, Long Island City N.Y., 1963.
+    \item H. Berens and G. G. Lorentz, Inverse theorem for Bernstein polynomials, Indiana Univ. Math. J. 21(1972), 693-708.
+\end{enumerate}
+
+\end{document}
